@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -70,6 +71,8 @@ class MainActivity : AppCompatActivity() {
             val newPhone = data?.getStringExtra("newPhone")
             phoneTxt.text = newPhone
 
+        } else {
+            Toast.makeText(this, "변경 사항 없음", Toast.LENGTH_SHORT).show()
         }
 
     }
